@@ -1,7 +1,7 @@
-import TechUpdate from "@/app/components/TechUpdate";
-import TechCards from "@/app/components/TechCards";
-import Email from "@/app/components/Email"
-import TechHero from "@/app/components/TechHero";
+import TechUpdate from "@/components/TechUpdate";
+import TechCards from "@/components/TechCards";
+import Email from "@/components/Email"
+import TechHero from "@/components/TechHero";
 
 export default function AiandTech() {
     return (

@@ -1,7 +1,7 @@
-import MacroHero from "@/app/components/MacroHero";
-import MacroCards from "@/app/components/MacroCards"
-import Feature from "@/app/components/Feature";
-import Updates from "@/app/components/Updates";
+import MacroHero from "@/components/MacroHero";
+import MacroCards from "@/components/MacroCards"
+import Feature from "@/components/Feature";
+import Updates from "@/components/Updates";
 
 export default function Macro() {
   return (

@@ -1,7 +1,7 @@
-import StorageHero from "@/app/components/StorageHero";
-import StorageCards from "@/app/components/StorageCards";
-import StorageUpdate from "@/app/components/StorageUpdate";
-import Email from "@/app/components/Email";
+import StorageHero from "@/components/StorageHero";
+import StorageCards from "@/components/StorageCards";
+import StorageUpdate from "@/components/StorageUpdate";
+import Email from "@/components/Email";
 
 export default function Storage() {
   return (

@@ -1,7 +1,7 @@
-import Email from "@/app/components/Email"
-import GreenHero from "@/app/components/GreenHero"
-import GreenUpdate from "@/app/components/GreenUpdates"
-import GreenCards from "@/app/components/GreenCards"
+import Email from "@/components/Email"
+import GreenHero from "@/components/GreenHero"
+import GreenUpdate from "@/components/GreenUpdates"
+import GreenCards from "@/components/GreenCards"
 
 export default function page() {
   return (

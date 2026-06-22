@@ -1,7 +1,7 @@
-import MetalHero from "@/app/components/MetalHero";
-import Email from "@/app/components/Email";
-import MetalUpdates from "@/app/components/MetalUpdate";
-import MetalCards from "@/app/components/MetalCard";
+import MetalHero from "@/components/MetalHero";
+import Email from "@/components/Email";
+import MetalUpdates from "@/components/MetalUpdate";
+import MetalCards from "@/components/MetalCard";
 
 
 export default function page() {

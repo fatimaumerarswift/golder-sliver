@@ -1,17 +1,15 @@
-import Email from "@/app/components/Email";
-import CoinsHero from "@/app/components/CoinsHero";
-import CoinCards from "@/app/components/CoinsCards";
-import CoinsUpdate from "@/app/components/CoinsUpdate";
-
+import Email from "@/components/Email";
+import CoinsHero from "@/components/CoinsHero";
+import CoinCards from "@/components/CoinsCards";
+import CoinsUpdates from "@/components/CoinsUpdate";
 
 export default function page() {
   return (
- <>
-<CoinsHero/>
-<CoinsUpdate/>
-<CoinCards/>
- <Email/>
- 
- </>
-  )
+    <>
+      <CoinsHero />
+      <CoinCards />
+      <CoinsUpdates/>
+      <Email />
+    </>
+  );
 }

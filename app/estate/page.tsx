@@ -1,7 +1,7 @@
-import Email from "@/app/components/Email"
-import EstateCards from "@/app/components/EstateCards"
-import EstateUpdate from "@/app/components/EstateUpdate"
-import EstateHero from "@/app/components/EstateHero"
+import Email from "@/components/Email"
+import EstateCards from "@/components/EstateCards"
+import EstateUpdate from "@/components/EstateUpdate"
+import EstateHero from "@/components/EstateHero"
 
 export default function page() {
   return (
