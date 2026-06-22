@@ -57,7 +57,7 @@ export default function Footer() {
             <a
               key={item.label}
               href={item.href}
-              className="text-gray-400 text-sm hover:text-[#B8860B] transition-colors duration-200"
+              className="text-white text-sm hover:text-[#B8860B] transition-colors duration-200"
             >
               {item.label}
             </a>
@@ -71,7 +71,7 @@ export default function Footer() {
             <a
               key={item.label}
               href={item.href}
-              className="text-gray-400 text-sm hover:text-[#B8860B] transition-colors duration-200"
+              className="text-white text-sm hover:text-[#B8860B] transition-colors duration-200"
             >
               {item.label}
             </a>
