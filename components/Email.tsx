@@ -33,7 +33,13 @@ export default function Email() {
   const lang = useLang();
   const t = content[lang];
   return (
-    <section className=" max-w-full bg-[#1A1A1A] text-white overflow-hidden">
+    <section className=" max-w-full bg-[#1A1A1A] text-white overflow-hidden"
+    style={{
+        backgroundColor: "#1A1A1A",
+        backgroundImage:
+            "linear-gradient(to bottom, rgba(184,134,11,0.15), transparent 35%), radial-gradient(circle at bottom right, rgba(184,134,11,0.15), transparent 40%)",
+      }}
+    >
 
       {/* sliver */}
       <div className="my-4 py-8 flex justify-end mr-50 ">

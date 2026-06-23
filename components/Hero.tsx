@@ -99,7 +99,7 @@ export default function Hero() {
   const bottomRow = t.categories.slice(10, 12);
 
   return (
-    <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 16px", background: "#fff", fontFamily: "system-ui, sans-serif" }}>
+    <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 30px", background: "#fff", fontFamily: "system-ui, sans-serif" }}>
 
       {/* ── Row 1: 4 equal cards ── */}
       <div  style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 10 }}>
