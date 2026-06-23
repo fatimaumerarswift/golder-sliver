@@ -139,7 +139,7 @@ export default function Hero() {
             }}
           >
             <span
-              className={`${inter.className} inline-block text-[#000] text-[10px] sm:text-xs font-bold uppercase tracking-wide px-2 sm:px-2.5 py-1 rounded-sm mb-2 w-fit`}
+              className={`${inter.className} inline-block text-[#000] text-[10px] sm:text-xs uppercase tracking-wide px-2 sm:px-2.5 py-1 rounded-sm mb-2 w-fit`}
               style={{ background: "#C9A227" }}
             >
               {t.featured.tag}
