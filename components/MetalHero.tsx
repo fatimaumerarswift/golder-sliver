@@ -27,36 +27,33 @@ export default function MetalHero() {
   const t = content[lang];
   return (
     <>
-      {/* Hero section */}
-      <div className="bg-white py-8 max-w-full px-12 ">
-       <div className="relative overflow-hidden w-full rounded-xl h-[260px] sm:h-[320px] md:h-[380px] lg:h-[450px]">
-                 <Image
-                   src="/Rectangle5.png"
-                   alt="Gold bars background"
-                   fill
-                   className="object-cover"
-                 />
-                 {/* black */}
-                  <div className="absolute inset-0 bg-black/40" />
-                 {/* text content */}
+       <div className="bg-white py-8 max-w-full px-12">
+              <div className="relative overflow-hidden rounded-xl mx-22 h-[260px] sm:h-[320px] md:h-[380px] lg:h-[400px]">
+                <Image
+                  src="/Rectangle5.png"
+                  alt="Gold bars background"
+                  fill
+                  className="object-cover sm:w-2xl"
+                />
+                {/* black */}
+                <div className="absolute inset-0 bg-black/40" />
+                {/* text content */}
                  <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-12">
-                   <span className={` ${inter.className} inline-block bg-[#B8860B] text-black text-xs md:text-sm px-3 py-1 rounded-md w-fit mb-3 font-bold`}>
+                  <span className={`${inter.className} inline-block bg-[#B8860B] text-black text-xs md:text-sm px-3 py-1 rounded-md w-fit mb-3 font-bold`}>
                     {t.badge}
-                   </span>
-       
-                   <h1 className={`${playfair.className} text-white text-xl md:text-3xl font-bold leading-snug`}>
-                  {t.title1}
-                   </h1>
-                   <h1 className={`${playfair.className} text-white text-xl md:text-3xl font-bold leading-snug`}>
-                {t.title2}
-                   </h1>
-       
-                   <p className={`${inter.className} text-white text-xs md:text-sm mt-2 max-w-xl`}>
-                {t.desc}
-                   </p>
-                 </div>
-               </div>
-      </div>
+                  </span>
+                  <h1 className={`${playfair.className} text-white text-xl md:text-3xl font-bold leading-snug`}>
+                    {t.title1}
+                  </h1>
+                  <h1 className={`${playfair.className} text-white text-xl md:text-3xl font-bold leading-snug`}>
+                    {t.title2}
+                  </h1>
+                  <p className={`${inter.className} text-white text-xs md:text-sm mt-2 max-w-xl`}>
+                    {t.desc}
+                  </p>
+                </div>
+              </div>
+            </div>
 
       {/* ticker bar */}
       <div className="w-full bg-black flex flex-wrap items-center gap-3 md:gap-4 py-3 md:py-4 px-4">

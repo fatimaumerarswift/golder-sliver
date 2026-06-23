@@ -96,30 +96,29 @@ export default function Updates() {
             </div>
 
             {/* right side - Live Prices */}
-            <div className="w-full my-8">
-              <div className="bg-[#FBF7EF] border border-[#E8DEC8] rounded-md p-5 lg:sticky lg:top-6">
+            <div className="w-full max-w-[320px] my-8">
+              <div className="bg-[#eeeeee] border border-[#E8DEC8] rounded-md p-5 lg:top-6">
                 <h3 className={`${playfair.className} flex items-center gap-2 text-lg font-bold mb-4`}>
                   <span className="text-[#B8860B]">▣</span> Live Prices
                 </h3>
 
                 <div className="flex flex-col divide-y divide-[#E8DEC8]">
                   {prices.map((p, i) => (
-                    <div key={i} className="flex items-center justify-between py-3">
-                      <span className={`${inter.className} text-xs sm:text-sm text-gray-600`}>
+                    <div key={i} className="flex items-center gap-3 py-3">
+                      <span className={`${inter.className} text-xs sm:text-sm text-gray-600 flex-1`}>
                         {p.label}
                       </span>
-                      <div className="text-right">
-                        <p className={`${jetbrainsMono.className} text-sm sm:text-base font-semibold`}>
+                      <div className="text-right ">
+                        <p className={`${jetbrainsMono.className} text-[#B8860B] text-sm sm:text-base font-semibold`}>
                           {p.value}
                         </p>
                         <p
-                          className={`${jetbrainsMono.className} text-xs ${
-                            p.up === true
+                          className={`${jetbrainsMono.className} text-xs ${p.up === true
                               ? "text-green-600"
                               : p.up === false
-                              ? "text-red-500"
-                              : "text-gray-500"
-                          }`}
+                                ? "text-red-500"
+                                : "text-gray-500"
+                            }`}
                         >
                           {p.up === true ? "▲ " : p.up === false ? "▼ " : ""}
                           {p.change}

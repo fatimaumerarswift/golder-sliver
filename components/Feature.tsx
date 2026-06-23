@@ -1,7 +1,5 @@
 "use client";
-
 import { Playfair_Display, JetBrains_Mono, Inter } from "next/font/google";
-import { FaYoutube } from 'react-icons/fa';
 import Image from "next/image";
 import { useLang } from "@/components/uselang";
 
@@ -59,7 +57,7 @@ export default function Feature() {
           {t.heading}{" "}
           <span className="text-[#B8860B]">{t.headingHighlight}</span>
         </h1>
-        <p className="leading-relaxed text-center text-sm py-4">{t.subtext}</p>
+        <p className="leading-relaxed text-center text-xl py-4">{t.subtext}</p>
       </div>
 
       {/* Cards */}

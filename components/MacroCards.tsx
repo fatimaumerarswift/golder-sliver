@@ -80,7 +80,7 @@ export default function MarcoCards() {
           <h1 className={`${playfair.className} text-2xl md:text-3xl lg:text-4xl text-center`}>
             {t.heading} <span className="text-[#B8860B]">{t.headingAccent}</span> {t.headingRest}
           </h1>
-          <p className="leading-relaxed text-center text-sm py-4">{t.subheading}</p>
+          <p className="leading-relaxed text-center text-xl py-4">{t.subheading}</p>
         </div>
 
         {/* cards */}
