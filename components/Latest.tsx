@@ -88,7 +88,7 @@ export default function Latest() {
     <section className="w-full py-16 px-6 bg-white">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-medium text-black">
+        <h2 className={`${playfair.className}text-3xl md:text-4xl font-medium text-black`}>
           {t.heading} <span className="text-[#B8860B]">{t.headingAccent}</span> {t.headingRest}
         </h2>
         <p className="text-black text-sm md:text-base mt-4 max-w-2xl mx-auto">
@@ -123,7 +123,7 @@ export default function Latest() {
               <h4 className="text-[#B8860B] font-bold text-xs tracking-widest uppercase">
                 {card.category}
               </h4>
-              <h3 className={`${playfair.className} text-lg text-black font-medium w-xl leading-snug`}>
+              <h3 className={`${playfair.className} text-lg text-black font-medium leading-snug`}>
                 {card.title}
               </h3>
               <p className="text-black text-sm leading-relaxed">{card.desc}</p>
@@ -134,7 +134,7 @@ export default function Latest() {
 
       <div className="flex justify-center mt-12">
         <button
-          className="text-[#B8860B] text-2xl underline  rounded-md px-6 py-2
+          className="text-[#B8860B] text-3xl underline font-semibold  rounded-md px-6 py-2
                      hover:bg-[#B8860B] hover:text-black hover:no-underline
                      transition-colors duration-200"
         >

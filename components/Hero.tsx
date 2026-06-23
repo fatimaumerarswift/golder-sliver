@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useLang } from "@/components/uselang";
 import { Playfair_Display, JetBrains_Mono, Inter } from "next/font/google";
 
@@ -83,6 +84,7 @@ function CategoryCard({ label, img }: { label: string; img: string }) {
 }
 
 export default function Hero() {
+  const [hover, setHover] = useState(false);
   const lang = useLang();
   const t = content[lang];
 
@@ -108,7 +110,7 @@ export default function Hero() {
         </div>
 
         {/* Featured */}
-        <div  style={{ position: "relative", borderRadius: 6, overflow: "hidden", height: 340, cursor: "pointer", border: "2px solid #B8860B", transition: "border-color 0.25s ease", boxSizing: "border-box" }}>
+        <div  style={{ position: "relative", borderRadius: 6, overflow: "hidden", height: 340, cursor: "pointer", border: hover ? "2px solid #B8860B" : "2px solid transparent", transition: "border-color 0.25s ease", boxSizing: "border-box" }}>
           <img
             src={t.featured.img}
             alt={t.featured.title}
@@ -140,9 +142,9 @@ export default function Hero() {
             <a
               href="#"
               style={{
-                display: "inline-block", border: "1.5px solid #B8860B",
+                display: "inline-block", border: "2px solid #B8860B",
                 color: "#B8860B", fontSize: 12, fontWeight: 600,
-                padding: "6px 18px", borderRadius: 4, textDecoration: "none", width: "fit-content",
+                padding: "6px 18px", borderRadius: 4,  width: "fit-content",
               }}
             >
               {t.featured.cta}
