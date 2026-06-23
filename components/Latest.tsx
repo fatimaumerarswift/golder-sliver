@@ -123,7 +123,7 @@ export default function Latest() {
               <h4 className="text-[#B8860B] font-bold text-xs tracking-widest uppercase">
                 {card.category}
               </h4>
-              <h3 className={`${playfair.className} text-lg text-black font-medium leading-snug`}>
+              <h3 className={`${playfair.className} text-lg text-black font-bold leading-snug`}>
                 {card.title}
               </h3>
               <p className="text-black text-sm leading-relaxed">{card.desc}</p>

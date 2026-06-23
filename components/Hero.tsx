@@ -10,18 +10,18 @@ const inter = Inter({ subsets: ["latin"] });
 const content = {
   en: {
     categories: [
-      { label: "Macro Tracking",    img: "/img1.jpg" },
-      { label: "Green Energy",      img: "/img2.jpg" },
-      { label: "Scrap Metal",       img: "/img3.jpg" },
-      { label: "Goldsmith",         img: "/img4.jpg" },
-      { label: "AI & Tech",         img: "/img5.jpg" },
-      { label: "Numismatics",       img: "/img6.jpg" },
-      { label: "Home Storage",      img: "/img7.jpg" },
-      { label: "Coins & Bars",      img: "/img11.jpg" },
-      { label: "Estate",            img: "/img10.jpg" },
+      { label: "Macro Tracking", img: "/img1.jpg" },
+      { label: "Green Energy", img: "/img2.jpg" },
+      { label: "Scrap Metal", img: "/img3.jpg" },
+      { label: "Goldsmith", img: "/img4.jpg" },
+      { label: "AI & Tech", img: "/img5.jpg" },
+      { label: "Numismatics", img: "/img6.jpg" },
+      { label: "Home Storage", img: "/img7.jpg" },
+      { label: "Coins & Bars", img: "/img11.jpg" },
+      { label: "Estate", img: "/img10.jpg" },
       { label: "Off-Grid Security", img: "/img12.jpg" },
-      { label: "Jewelry Resale",    img: "/img8.jpg" },
-      { label: "Metal Detecting",   img: "/img9.jpg" },
+      { label: "Jewelry Resale", img: "/img8.jpg" },
+      { label: "Metal Detecting", img: "/img9.jpg" },
     ],
     featured: {
       tag: "Macro Tracing",
@@ -34,18 +34,18 @@ const content = {
   },
   de: {
     categories: [
-      { label: "Makro-Tracking",        img: "/img1.jpg" },
-      { label: "Grüne Energie",         img: "/img2.jpg" },
-      { label: "Schrottmetall",         img: "/img3.jpg" },
-      { label: "Goldschmied",           img: "/img4.jpg" },
-      { label: "KI & Technologie",      img: "/img5.jpg" },
-      { label: "Numismatik",            img: "/img6.jpg" },
-      { label: "Heimlagerung",          img: "/img7.jpg" },
-      { label: "Münzen & Barren",       img: "/img11.jpg" },
-      { label: "Nachlass",              img: "/img10.jpg" },
-      { label: "Autarke Sicherheit",    img: "/img2.jpg" },
+      { label: "Makro-Tracking", img: "/img1.jpg" },
+      { label: "Grüne Energie", img: "/img2.jpg" },
+      { label: "Schrottmetall", img: "/img3.jpg" },
+      { label: "Goldschmied", img: "/img4.jpg" },
+      { label: "KI & Technologie", img: "/img5.jpg" },
+      { label: "Numismatik", img: "/img6.jpg" },
+      { label: "Heimlagerung", img: "/img7.jpg" },
+      { label: "Münzen & Barren", img: "/img11.jpg" },
+      { label: "Nachlass", img: "/img10.jpg" },
+      { label: "Autarke Sicherheit", img: "/img2.jpg" },
       { label: "Schmuck-Weiterverkauf", img: "/img8.jpg" },
-      { label: "Metallsuche",           img: "/img9.jpg" },
+      { label: "Metallsuche", img: "/img9.jpg" },
     ],
     featured: {
       tag: "Makro-Verfolgung",
@@ -59,12 +59,16 @@ const content = {
 };
 
 function CategoryCard({ label, img }: { label: string; img: string }) {
+  const [hover, setHover] = useState(false);
   return (
-    <div style={{ position: "relative", borderRadius: 6, overflow: "hidden", height: 110, cursor: "pointer", flexShrink: 0 }}>
+    <div onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)} style={{ position: "relative", borderRadius: 6, overflow: "hidden", height: 110, cursor: "pointer", flexShrink: 0, border: hover ? "2px solid #B8860B" : "2px solid transparent",transition: "border-color 0.25s ease",
+        boxSizing: "border-box", }}>
       <img
         src={img}
         alt={label}
-        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transform: hover ? "scale(1.06)" : "scale(1)",
+          transition: "transform 0.3s ease", }}
       />
       <span
         style={{
@@ -75,6 +79,7 @@ function CategoryCard({ label, img }: { label: string; img: string }) {
           color: "#fff",
           fontSize: 13,
           fontWeight: 600,
+          
         }}
       >
         {label}
@@ -88,17 +93,17 @@ export default function Hero() {
   const lang = useLang();
   const t = content[lang];
 
-  const topRow    = t.categories.slice(0, 4);
-  const leftCol   = t.categories.slice(4, 7);
-  const rightCol  = t.categories.slice(7, 10);
+  const topRow = t.categories.slice(0, 4);
+  const leftCol = t.categories.slice(4, 7);
+  const rightCol = t.categories.slice(7, 10);
   const bottomRow = t.categories.slice(10, 12);
 
   return (
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 16px", background: "#fff", fontFamily: "system-ui, sans-serif" }}>
 
       {/* ── Row 1: 4 equal cards ── */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 10 }}>
-        {topRow.map((c) => <CategoryCard key={c.label} {...c} />)}
+      <div  style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 10 }}>
+        {topRow.map((c) => <CategoryCard key={c.label} {...c}  />)}
       </div>
 
       {/* ── Row 2: left col | featured | right col ── */}
@@ -110,7 +115,8 @@ export default function Hero() {
         </div>
 
         {/* Featured */}
-        <div  style={{ position: "relative", borderRadius: 6, overflow: "hidden", height: 340, cursor: "pointer", border: hover ? "2px solid #B8860B" : "2px solid transparent", transition: "border-color 0.25s ease", boxSizing: "border-box" }}>
+        <div onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)} style={{ position: "relative", borderRadius: 6, overflow: "hidden", height: 340, cursor: "pointer", border: hover ? "2px solid #B8860B" : "2px solid transparent", transition: "border-color 0.25s ease", boxSizing: "border-box" }}>
           <img
             src={t.featured.img}
             alt={t.featured.title}
@@ -126,7 +132,7 @@ export default function Hero() {
           >
             <span
               style={{
-                display: "inline-block", background: "#C9A227", color: "#0000000" ,
+                display: "inline-block", background: "#C9A227", color: "#0000000",
                 fontSize: 12, fontWeight: 700, letterSpacing: ".6px", textTransform: "uppercase",
                 padding: "3px 10px", borderRadius: 3, marginBottom: 10, width: "fit-content",
               }}
@@ -144,7 +150,7 @@ export default function Hero() {
               style={{
                 display: "inline-block", border: "2px solid #B8860B",
                 color: "#B8860B", fontSize: 12, fontWeight: 600,
-                padding: "6px 18px", borderRadius: 4,  width: "fit-content",
+                padding: "6px 18px", borderRadius: 4, width: "fit-content",
               }}
             >
               {t.featured.cta}
