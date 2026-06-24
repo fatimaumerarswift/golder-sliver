@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useLang } from "@/components/uselang";
 import { Playfair_Display, JetBrains_Mono, Inter } from "next/font/google";
 
@@ -11,18 +12,18 @@ const inter = Inter({ subsets: ["latin"] });
 const content = {
   en: {
     categories: [
-      { label: "Macro Tracking", img: "/img1.jpg" },
-      { label: "Green Energy", img: "/img2.jpg" },
-      { label: "Scrap Metal", img: "/img3.jpg" },
-      { label: "Goldsmith", img: "/img4.jpg" },
-      { label: "AI & Tech", img: "/img5.jpg" },
-      { label: "Numismatics", img: "/img6.jpg" },
-      { label: "Home Storage", img: "/img7.jpg" },
-      { label: "Coins & Bars", img: "/img11.jpg" },
-      { label: "Estate", img: "/img10.jpg" },
-      { label: "Off-Grid Security", img: "/img12.jpg" },
-      { label: "Jewelry Resale", img: "/img8.jpg" },
-      { label: "Metal Detecting", img: "/img9.jpg" },
+      { label: "Macro Tracking", img: "/img1.jpg", href: "/macro" },
+      { label: "Green Energy", img: "/img2.jpg", href: "/green-energy" },
+      { label: "Scrap Metal", img: "/img3.jpg", href: "/scrap-metal" }, 
+      { label: "Off-Grid Security", img: "/img4.jpg", href: "/off-grid" },
+      { label: "AI & Tech", img: "/img5.jpg", href: "/ai-tech" },
+      { label: "Home Storage", img: "/img6.jpg", href: "/storage" },
+      { label: "Estate", img: "/img7.jpg", href: "/estate" },
+      { label: "Numismatics", img: "/img11.jpg", href: "/numismatics" },
+      { label: "Metal Detecting", img: "/img10.jpg", href: "/metaldetection" },
+       { label: "Goldsmith", img: "/img12.jpg", href: "/goldsmith" },
+      { label: "Jewelry Resale", img: "/img8.jpg", href: "/jewelry" },
+      { label: "Coins & Bars", img: "/img9.jpg", href: "/coins-bars" },
     ],
     featured: {
       tag: "Macro Tracing",
@@ -35,18 +36,18 @@ const content = {
   },
   de: {
     categories: [
-      { label: "Makro-Tracking", img: "/img1.jpg" },
-      { label: "Grüne Energie", img: "/img2.jpg" },
-      { label: "Schrottmetall", img: "/img3.jpg" },
-      { label: "Goldschmied", img: "/img4.jpg" },
-      { label: "KI & Technologie", img: "/img5.jpg" },
-      { label: "Numismatik", img: "/img6.jpg" },
-      { label: "Heimlagerung", img: "/img7.jpg" },
-      { label: "Münzen & Barren", img: "/img11.jpg" },
-      { label: "Nachlass", img: "/img10.jpg" },
-      { label: "Autarke Sicherheit", img: "/img2.jpg" },
-      { label: "Schmuck-Weiterverkauf", img: "/img8.jpg" },
-      { label: "Metallsuche", img: "/img9.jpg" },
+      { label: "Makro-Tracking", img: "/img1.jpg", href: "/macro" },
+      { label: "Grüne Energie", img: "/img2.jpg", href: "/green-energy" },
+      { label: "Schrottmetall", img: "/img3.jpg", href: "/scrap-metal" },
+      { label: "Goldschmied", img: "/img4.jpg", href: "/goldsmith" },
+      { label: "KI & Technologie", img: "/img5.jpg", href: "/ai-tech" },
+      { label: "Numismatik", img: "/img6.jpg", href: "/numismatics" },
+      { label: "Heimlagerung", img: "/img7.jpg", href: "/coins-bars" },
+      { label: "Münzen & Barren", img: "/img11.jpg", href: "/storage" },
+      { label: "Nachlass", img: "/img10.jpg", href: "/estate" },
+      { label: "Autarke Sicherheit", img: "/img2.jpg", href: "/storage" },
+      { label: "Schmuck-Weiterverkauf", img: "/img8.jpg", href: "/jewelry" },
+      { label: "Metallsuche", img: "/img9.jpg", href: "/metaldetection" },
     ],
     featured: {
       tag: "Makro-Verfolgung",
@@ -59,13 +60,14 @@ const content = {
   },
 };
 
-function CategoryCard({ label, img }: { label: string; img: string }) {
+function CategoryCard({ label, img, href }: { label: string; img: string; href: string }) {
   const [hover, setHover] = useState(false);
   return (
-    <div
+    <Link
+      href={href}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="relative rounded-md overflow-hidden h-24 sm:h-28 md:h-[110px] cursor-pointer shrink-0 box-border transition-colors duration-300"
+      className="relative rounded-md overflow-hidden h-24 sm:h-28 md:h-[110px] cursor-pointer shrink-0 box-border transition-colors duration-300 block"
       style={{ border: hover ? "2px solid #B8860B" : "2px solid transparent" }}
     >
       <img
@@ -80,7 +82,7 @@ function CategoryCard({ label, img }: { label: string; img: string }) {
       >
         {label}
       </span>
-    </div>
+    </Link>
   );
 }
 
@@ -155,8 +157,7 @@ export default function Hero() {
             </p>
             <a
               href="#"
-                 className={`${inter.className} border border-[#B8860B] rounded-lg text-[#B8860B] text-sm font-semibold px-6 py-2 w-fit hover:bg-[#B8860B] hover:text-black transition-colors duration-200`}
-              
+              className={`${inter.className} border border-[#B8860B] rounded-lg text-[#B8860B] text-sm font-semibold px-6 py-2 w-fit hover:bg-[#B8860B] hover:text-black transition-colors duration-200`}
             >
               {t.featured.cta}
             </a>
