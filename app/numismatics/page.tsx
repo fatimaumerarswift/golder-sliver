@@ -1,5 +1,5 @@
 import NumUpdates from "@/components/NumUpdate";
-import Email from "@/components/Email";
+import Emails from "@/components/Emails";
 import NumCards from "@/components/NumCards";
 import NumHero from "@/components/NumHero";
 
@@ -10,7 +10,7 @@ export default function page() {
  <NumHero/>
  <NumUpdates/>
  <NumCards/>
- <Email/>
+ <Emails/>
  
  </>
   )

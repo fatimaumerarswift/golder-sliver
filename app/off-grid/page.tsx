@@ -1,5 +1,5 @@
 import GridHero from "@/components/GridHero";
-import Email from "@/components/Email";
+import Emails from "@/components/Emails";
 import GridUpdate from "@/components/GridUpdate";
 import GridCards from "@/components/GridCards";
 
@@ -10,7 +10,7 @@ export default function page() {
       <GridHero/>  
       <GridUpdate/>
       <GridCards/>
-        <Email/>
+        <Emails/>
     
     </>
   )

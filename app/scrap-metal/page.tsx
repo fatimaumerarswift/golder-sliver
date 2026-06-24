@@ -1,5 +1,5 @@
 import MetalHero from "@/components/MetalHero";
-import Email from "@/components/Email";
+import Emails from "@/components/Emails";
 import MetalUpdates from "@/components/MetalUpdate";
 import MetalCards from "@/components/MetalCard";
 
@@ -10,7 +10,7 @@ export default function page() {
    <MetalHero/>
    <MetalUpdates/>
    <MetalCards/>
-   <Email/>
+   <Emails/>
    </>
   )
 }

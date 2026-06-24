@@ -1,4 +1,4 @@
-import Email from "@/components/Email"
+import Emails from "@/components/Emails"
 import EstateCards from "@/components/EstateCards"
 import EstateUpdate from "@/components/EstateUpdate"
 import EstateHero from "@/components/EstateHero"
@@ -9,7 +9,7 @@ export default function page() {
 <EstateHero/>
     <EstateUpdate/>
     <EstateCards/>
-    <Email/>
+    <Emails/>
     
     
     </>

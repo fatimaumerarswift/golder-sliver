@@ -1,4 +1,4 @@
-import Email from "@/components/Email"
+import Emails from "@/components/Emails"
 import GreenHero from "@/components/GreenHero"
 import GreenUpdate from "@/components/GreenUpdates"
 import GreenCards from "@/components/GreenCards"
@@ -9,7 +9,7 @@ export default function page() {
     <GreenHero/>
     <GreenUpdate/>
     <GreenCards/>
-    <Email/>
+    <Emails/>
     
     
     </>

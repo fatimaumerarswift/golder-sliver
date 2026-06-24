@@ -1,4 +1,4 @@
-import Email from "@/components/Email";
+import Emails from "@/components/Emails";
 import CoinsHero from "@/components/CoinsHero";
 import CoinCards from "@/components/CoinsCards";
 import CoinsUpdates from "@/components/CoinsUpdate";
@@ -9,7 +9,7 @@ export default function page() {
       <CoinsHero />
       <CoinsUpdates/>
       <CoinCards />
-      <Email />
+      <Emails />
     </>
   );
 }

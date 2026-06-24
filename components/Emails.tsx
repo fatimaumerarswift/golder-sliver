@@ -29,7 +29,7 @@ const content = {
   },
 };
 
-export default function Email() {
+export default function Emails() {
   const lang = useLang();
   const t = content[lang];
   return (
@@ -37,7 +37,7 @@ export default function Email() {
     style={{
         backgroundColor: "#1A1A1A",
         backgroundImage:
-            "linear-gradient(to bottom, rgba(184,134,11,0.15), transparent 35%), radial-gradient(circle at bottom right, rgba(184,134,11,0.15), transparent 40%)",
+            "linear-gradient(to bottom, rgba(184,134,11,0.15), transparent 35%)",
         // backgroundAttachment: "fixed"
       }}
     >
@@ -78,7 +78,7 @@ export default function Email() {
           className={`${inter.className} bg-white text-black text-sm rounded-md px-4 py-2 w-60 outline-none`}
         />
         <button
-          className={`${inter.className} border border-[#B8860B] rounded-lg text-[#B8860B] text-sm font-semibold px-6 py-2 hover:bg-[#a07608] hover:text-white transition-colors duration-200`}
+          className={`${inter.className} border border-[#B8860B] rounded-lg text-[#B8860B] text-sm font-semibold px-6 py-2 hover:bg-[#a07608] transition-colors duration-200`}
         >
           {t.button}
         </button>
