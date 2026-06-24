@@ -44,10 +44,10 @@ export default function GridHero() {
                     {t.badge}
                    </span>
        
-                   <h1 className={`${playfair.className} text-white text-xl md:text-3xl font-bold leading-snug`}>
+                   <h1 className={`${playfair.className} text-white text-xl md:text-4xl font-bold leading-snug`}>
                    {t.title1}
                    </h1>
-                   <h1 className={`${playfair.className} text-white text-xl md:text-3xl font-bold leading-snug`}>
+                   <h1 className={`${playfair.className} text-white text-xl md:text-4xl font-bold leading-snug`}>
                  {t.title2}
                    </h1>
        

@@ -78,7 +78,7 @@ export default function Emails() {
           className={`${inter.className} bg-white text-black text-sm rounded-md px-4 py-2 w-60 outline-none`}
         />
         <button
-          className={`${inter.className} border border-[#B8860B] rounded-lg text-[#B8860B] text-sm font-semibold px-6 py-2 hover:bg-[#a07608] transition-colors duration-200`}
+          className={`${inter.className} border border-[#B8860B] rounded-lg text-[#B8860B] text-sm font-semibold px-6 py-2 hover:bg-[#a07608] hover:text-white transition-colors duration-200`}
         >
           {t.button}
         </button>
